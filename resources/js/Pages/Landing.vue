@@ -86,7 +86,7 @@
         });
       },
       joinNow() {
-        window.location.href = '';
+        window.location.href = 'Welcome';
       },
       onResize() {
         const canvas = this.$refs.dotsCanvas;

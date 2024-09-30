@@ -45,8 +45,5 @@ class ProviderController extends Controller
         } catch(Exception $e){
             return redirect('/login');
         }
-        
- 
-    
     }
 }

@@ -53,7 +53,7 @@ onBeforeUnmount(() => {
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
       <nav class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
         <!-- Primary Navigation Menu -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-1xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between h-16">
             <div class="flex items-center space-x-4">
               <!-- Logo and Company Name -->
@@ -79,9 +79,9 @@ onBeforeUnmount(() => {
                   Posts
                 </NavLink>
 
-                <!-- <NavLink v-if="hasRole('moderator') && !hasRole('admin')" :href="route('stores.create')" :active="route().current('stores.index')">
+                <NavLink v-if="hasRole('moderator')" :href="route('stores.index')" :active="route().current('stores.index')">
                   Create Store
-                </NavLink> -->
+                </NavLink>
 
 
               </div>
@@ -163,9 +163,9 @@ onBeforeUnmount(() => {
             <ResponsiveNavLink :href="route('posts.index')" :active="route().current('posts.index')">Posts</ResponsiveNavLink>
           </div>
          
-          <!-- <div class="pt-2 pb-3 space-y-1">
-            <ResponsiveNavLink :href="route('stores.create')" :active="route().current('stores.create')">Create Store</ResponsiveNavLink>
-          </div> -->
+          <div class="pt-2 pb-3 space-y-1">
+            <ResponsiveNavLink :href="route('stores.index')" :active="route().current('stores.index')">Create Store</ResponsiveNavLink>
+          </div>
 
           <!-- Responsive Settings Options -->
           <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
