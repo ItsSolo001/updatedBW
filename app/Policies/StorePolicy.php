@@ -29,7 +29,7 @@ class StorePolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasPermissionTo('create store') ? true : false;
+        return $user->hasPermissionTo('create store');
     }
 
     /**

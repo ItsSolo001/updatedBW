@@ -10,6 +10,7 @@ import TableDataCell from "@/Components/TableDataCell.vue";
 import Modal from "@/Components/Modal.vue";
 import DangerButton from "@/Components/DangerButton.vue";
 import SecondaryButton from "@/Components/SecondaryButton.vue";
+import AboutModal from "@/Components/AboutModal.vue";
 
 
 defineProps(["posts"]);

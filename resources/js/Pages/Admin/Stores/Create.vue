@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 import AdminLayout from "@/Layouts/AdminLayout.vue";
 import { Head, Link, useForm } from "@inertiajs/vue3";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
@@ -103,4 +103,4 @@ const form = useForm({
             </div>
         </div>
     </AdminLayout>
-</template> -->
+</template>

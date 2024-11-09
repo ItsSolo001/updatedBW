@@ -10,6 +10,7 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\RemoveRoleFromUserController;
@@ -44,13 +45,16 @@ Route::get('Welcome', function () {
 Route::get('/auth/{provider}/redirect', [ProviderController::class, 'redirect'])->name('oauth.redirect');
 Route::get('/auth/{provider}/callback', [ProviderController::class, 'callback'])->name('oauth.callback');
 
+Route::controller(GoogleAuthController::class)->group(function(){
+    Route::get('auth/google', 'googleLogin')->name('auth.google');
+    Route::get('auth/google-callback', 'googleAuthentication')->name('auth.google-callback');
 
+});
 
 
 Route::resource('/users', UserController::class);
 Route::resource('/roles', RoleController::class);
 Route::resource('/permissions', PermissionController::class);
-// Route::resource('/stores', StoreController::class);
 Route::resource('/posts', PostController::class);
 Route::delete('roles/{role}/permissions/{permission}', RevokePermissionFromRoleController::class)
        ->name('roles.permissions.destroy');
@@ -59,6 +63,8 @@ Route::delete('users/{user}/permissions/{permission}', RevokePermissionFromUserC
 Route::delete('users/{user}/roles/{role}', RemoveRoleFromUserController::class)
        ->name('users.roles.destroy');
 
+Route::get('/stores/create', [StoreController::class, 'create'])->name('stores.create');
+Route::post('/stores', [StoreController::class, 'store'])->name('stores.store');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

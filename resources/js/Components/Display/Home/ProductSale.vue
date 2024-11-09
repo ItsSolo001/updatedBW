@@ -5,7 +5,7 @@
         <!-- Container 1 -->
         <div class="w-full md:w-1/2 bg-gray-700 p-6 rounded-lg relative">
           <div class="flex justify-between items-center mb-6">
-            <h2 class="text-xl md:text-2xl text-white font-playfair">Product</h2>
+            <h2 class="text-xl md:text-2xl text-white font-playfair">Store</h2>
             <a href="#" class="text-xs md:text-sm text-gray-400 font-playfair">See More</a>
           </div>
 
@@ -31,7 +31,7 @@
                   <h3 class="text-base md:text-lg text-white mb-2 font-playfair">Name: {{ product.name }}</h3>
                   <p class="text-xs md:text-sm text-gray-300 mb-1">Description: {{ product.description }}</p>
                   <div class="text-sm font-bold text-white mb-1">₱rice: {{ product.price }}</div>
-                  <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded transition-colors duration-300">Buy Now</button>
+                  <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded transition-colors duration-300">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -49,7 +49,7 @@
         <!-- Container 2 -->
         <div class="w-full md:w-1/2 bg-gray-700 p-6 rounded-lg relative mt-4 md:mt-0">
           <div class="flex justify-between items-center mb-6">
-            <h2 class="text-xl md:text-2xl text-white font-playfair">Product</h2>
+            <h2 class="text-xl md:text-2xl text-white font-playfair">Store</h2>
             <a href="#" class="text-xs md:text-sm text-gray-400 font-playfair">See More</a>
           </div>
 
@@ -75,7 +75,7 @@
                   <h3 class="text-base md:text-lg text-white mb-2 font-playfair">Name: {{ product.name }}</h3>
                   <p class="text-xs md:text-sm text-gray-300 mb-1">Description: {{ product.description }}</p>
                   <div class="text-sm font-bold text-white mb-1">₱rice: {{ product.price }}</div>          
-                  <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-colors duration-300">Buy Now</button>
+                  <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-colors duration-300">Add to Cart</button>
                 </div>
               </div>
             </div>
